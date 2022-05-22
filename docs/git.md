@@ -11,10 +11,10 @@ sudo apt install git -y
 ```sh
 # Exemplo simples
 git config --global user.name "Sarita"
-git config --global user.email "sarita@gunita.om"
+git config --global user.email "ex@ex.ex"
 ```
 
-- Ou usando um editor de texto: Abrir o ficheiro de configuração
+- Ou usando um editor de texto
 
 ```sh
 cd
@@ -30,7 +30,7 @@ Usando o editor vi / vim
 ```sh
 vim ~/.gitconfig
 i ( para inserir )
-Esc ( para sair do modo de escrita ( i ))
+Esc ( para sair do-modo de escrita )
 :w ( para salvar )
 :q ( para sair )
 # Opcionalmente
@@ -43,15 +43,24 @@ O ficheiro de configuração tem os seguintes campos recomendados
 [commit]
 	gpgsign = false
 [user]
-	name = Sarita ( podes usar o nome que quiseres ) LadyMath :p
-	email = sarita@bonita.om ( podes usar o email que quiseres ) LadyMath@math.com
+	name = ( podes usar o nome que quiseres ) LadyMath :p
+	email = ( podes usar o email que quiseres ) LadyMath@math.com
 [credential]
   username = ghp_O_TEU_TOKEN
   password = ghp_O_TEU_TOKEN
 ```
 
-Opcionalmente caso a segurança seja uma preocupação, existe uma forma de garantir que o token n esteja exposto no
-ficheiro de configuração mas associado a uma ficheiro encriptado que só pode ser criado com o programa GNUPG / gpg /
-gpg2
+Por norma os comandos mais usados no git são:
 
-Também em Ingles, tens uma ajuda simples ( sem muito 'bla bla bla' no meu blog): https://rakzhodekams.github.io/devblog/linux/gpg.html
+```sh
+git status # Ver quais os ficheiros que foram modificados e que estão à espera de actualização
+git add ficheiro.txt # adicionar ficheiro à lista de commit
+git commit -m "Commit da mensagem com texto que descreve o commit"
+```
+
+Se gostas de fazer alterações a fundo, podes sempre criar um novo <b>branch</b> de forma a não alterares o original.
+
+```sh
+git branch NovoNome
+git switch NovoNome
+```
