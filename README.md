@@ -42,13 +42,4 @@ Este ficheiro, não tens mais conteúdo? **Atenção: fiz alguns err0s ortogarfi
 
 Neste espaço, pode-se adicionar **links** para cada um dos vários ficheiros que irão servir como Documentação de ajuda.
 
-[git](./docs/git.md) - Como exemplo, fica uma cópia literal do outro repositório chamado "Repo-de-Ajuda"
-
-Existe também um software muito útil para veres o histórico de cada repositório chamado "tig"
-
-```sh
-sudo apt install tig -y
-```
-
-Com este programa instalador, ao ser executado no terminal dentro de um repositório, ele apresenta os vários commits e o
-autor dos mesmos! :)
+[Work Flow](./docs/workflow.md) - Já estou a traduzir algumas coisas do meu blog que também está num outro repositório.
