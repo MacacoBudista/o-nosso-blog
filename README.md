@@ -30,7 +30,7 @@ mkdir docs # a pasta "docs" serve para a parte documental dos projectos
 
 Assim sendo, toda a parte documental do blog que um dia poderá estar em formato de site, ficará dentro da pasta docs
 
-Este ficheiro, não tens mais conteúdo?
+Este ficheiro, não tens mais conteúdo? **Atenção: fiz alguns err0s ortogarficus para poderes corrigir** .
 
 ### Sugestões:
 
@@ -43,3 +43,12 @@ Este ficheiro, não tens mais conteúdo?
 Neste espaço, pode-se adicionar **links** para cada um dos vários ficheiros que irão servir como Documentação de ajuda.
 
 [git](./docs/git.md) - Como exemplo, fica uma cópia literal do outro repositório chamado "Repo-de-Ajuda"
+
+Existe também um software muito útil para veres o histórico de cada repositório chamado "tig"
+
+```sh
+sudo apt install tig -y
+```
+
+Com este programa instalador, ao ser executado no terminal dentro de um repositório, ele apresenta os vários commits e o
+autor dos mesmos! :)
