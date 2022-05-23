@@ -154,8 +154,8 @@ Outro tipo de listas podem ser considerados, também usados para os campos de me
 ```html
 <!-- lista ordenada alfabeticamente -->
 <ol>
-	<li>1</li>
-	<li>2</li>
+	<li>A</li>
+	<li>B</li>
 </ol>
 <!-- lista não ordenada -->
 <ul>
@@ -163,3 +163,5 @@ Outro tipo de listas podem ser considerados, também usados para os campos de me
 	<li>2</li>
 </ul>
 ```
+
+[página com os exemplos referidos acima](./exemplos/html-exemplo-formatar-text.html)
