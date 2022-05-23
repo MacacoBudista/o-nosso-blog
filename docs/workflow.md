@@ -11,7 +11,6 @@
 | <b>VIM</b>    | Editor de texto para terminal                                   | [Fonte](https://www.vim.org)          | [Notas](./linux/vim.md)  |
 | <b>TMUX</b>   | Permite ter várias "tabs" num único terminal                    | [Fonte](https://github.com/tmux/tmux) | [Notas](./linux/tmux.md) |
 | <b>NodeJS</b> | Para o desenvolvimento do "front-end" e "back-end"              | [Fonte](https://nodejs.org)           | [Notas](./web/nodejs.md) |
+| <b>HTML</b>   | Estrutura que descreve uma página web                           | Mozilla                               | [Notas](./web/html.md)   |
 
 Esses serão os programas mais usados para desenvolver código para a web.
-
-O editor de texto ( Visual Studio Code ) tem integrado como plugin, o git e o tig.
