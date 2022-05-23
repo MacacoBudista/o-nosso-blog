@@ -40,7 +40,22 @@ Menus, botões, campos de texto, artigos, etc..
 
 ```html
 <body>
-	<h1 tooltip="Coisa coiso coisada coisado">Titulo do artigo</h1>
 	<p title="Descrição">Descrição do artigo</p>
 </body>
+```
+
+Assim, para ficarmos com uma ideia global, faz-se uma descrição completa das tags remendadas que todas as páginas web devem ter.
+
+```html
+<!DOCTYPE html>
+<html lang="PT">
+	<head>
+		<title>O Titulo da página</title>
+		<meta name="descrição" content="descrição da página" />
+		<meta name="keywords" content="ajuda, html, tags, aprender" />
+	</head>
+	<body>
+		Conteudo não formatado
+	</body>
+</html>
 ```
