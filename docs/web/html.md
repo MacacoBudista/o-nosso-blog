@@ -166,7 +166,7 @@ Outro tipo de listas podem ser considerados, também usados para os campos de me
 </ul>
 ```
 
-[página com os exemplos referidos acima](./exemplos/html-exemplo-formatar-text.html) e um pouco de animação!
+[página com os exemplos referidos acima](./exemplos/html_texto/html-exemplo-formatar-text.html) e um pouco de animação!
 
 <hr>
 
