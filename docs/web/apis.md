@@ -1,5 +1,6 @@
 <h3> Cool JavaScript APIs </h3>
-
+| Nome da API | Breve Descrição | 
+| ---- | ---- | 
 | [HTML](https://html.spec.whatwg.org/multipage/) | HTTP Specification |
 | [fetch()](https://fetch.spec.whatwg.org/) | HTTP Fetch Specification |
 | [DOM](https://dom.spec.whatwg.org/) | HTML Document Object Model Specification |
