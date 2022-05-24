@@ -54,7 +54,8 @@ o <b>k</b> à seta (cima), o <b>h</b> à seta (esquerda) e por fim o <b>l</b> à
 ```
 
 <b>Nota</b>: <mark>Só é possível aceder ao modo de comando : quando estamos em modo de leitura</mark>! <br>
-Para sair do modo de escrita, usa-se o <b>Esc</b> (tecla Escape).
+<b>Nota</b>: O modo <b>visual</b> funciona como o modo de <b>leitura</b> mas ao movermos o cursor, o editor está a
+selecionar texto. Para sair do modo de escrita, usa-se o <b>Esc</b> (tecla Escape).
 
 <hr>
 
