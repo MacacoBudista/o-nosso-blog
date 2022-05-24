@@ -77,3 +77,29 @@ nav {
 	border: 2px solid rgba(255, 90, 70, 3);
 }
 ```
+
+Como se pode verificar, com o CSS podemos alterar o tipo de fonte, o tamanho da fonte, a posição dos elementos,
+a decoração dos mesmos, os limites e as animações e\ou efeitos que podemos definir a cada elemento de HTML.
+
+Para facilitar a leitura e o estudo, deixo uma tabela que tenta simplificar alguns dos vários atributos que podem ser definidos
+pelo CSS à maioria dos elementos, sendo estas propriedades, as mais usadas.
+
+```markdown
+| Atributo do HTML | Propriedade do CSS | Descrição da propriedade do CSS  | Exemplo        |
+| ---------------- | ------------------ | -------------------------------- | -------------- |
+| .class/#id       | color:             | Cor da fonte que o elemento tem  | green;         |
+| .class/#id       | background-color:  | Cor de fundo do elemento         | blue;          |
+| .class/#id       | border:            | linha envonvente do elemento     | 1px solid red; |
+| .class/#id       | margin:            | margem entre elementos           | 2rem;          |
+| .class/#id       | padding:           | espaçamento entre elementos      | 5px;           |
+| .class/#id       | height:            | espaço ocupado verticalmente     | 300px;         |
+| .class/#id       | width:             | espaço ocupado horizontalmente   | 300px;         |
+| .class/#id       | outline:           | espaço acima da linha envolvente | 10px;          |
+| .class/#id       | display:           | estilo visual do elemento        | block;         |
+| .class/#id       | float:             | coloca elemento num dos lados    | left;          |
+| .class/#id       | max-width:         | largura máxima                   | 1500px;        |
+| .class/#id       | min-width:         | largura minima                   | 680px;         |
+| .class/#id       | max-height:        | altura máxima                    | 1024px;        |
+| .class/#id       | min-height:        | altura minima                    | 800px;         |
+| .class/#id       | align:             | alinhar conteúdo                 | center;        |
+```
