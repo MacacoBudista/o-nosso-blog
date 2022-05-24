@@ -1,17 +1,17 @@
 # Git
 
-Use git to control the versions of your code. Git grabs each modification you make in your code.
+O git serve para controlar as versões do código. Cada moficação terá um endereço gerado automaticamente pelo git de
+forma a destacar / separar cada modificação, numa versão.
 
 In all Linux distros, git is already installed, or if not you can install it.
+Quase sempre, todas as distribuições Linux já têm o git instalado, mas se não for o caso:
 
 ```sh
-# Debian based
+# Debian
 sudo apt install git
-# Gentoo based
-sudo emerge -av dev-vcs/git
 ```
 
-Edit Configuration file
+Editar configuração:
 
 ```sh
 vim ~/.gitconfig
@@ -132,5 +132,3 @@ Clone missing submodules
 ```sh
 $ git submodule update --init --recursive
 ```
-
-Check [Naughty Monkey Thoughts](../github/thoughts.md)
