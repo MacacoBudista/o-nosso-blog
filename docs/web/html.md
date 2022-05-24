@@ -166,11 +166,14 @@ Outro tipo de listas podem ser considerados, também usados para os campos de me
 </ul>
 ```
 
-[página com os exemplos referidos acima](./exemplos/html-exemplo-formatar-text.html)
+[página com os exemplos referidos acima](./exemplos/html-exemplo-formatar-text.html) e um pouco de animação!
+
+<hr>
 
 Nesta noção de que cada elemento abrange um espaço próprio, pois cada tag define o principio e o fim do conteúdo dessa
-tag e no fim de cada elemento, existe uma <b>quebra de linha</b>,
-dá-se o nome de 'block-level' ao espaço que terá o conteúdo que desejamos ter, nos seguintes elementos de HTML:
+tag e no fim de cada elemento, existe uma <b>quebra de linha</b>, dá-se o nome de 'block-level'.
+<br><b>Atenção</b>: Existem também elementos que ocupam um espaço qualquer, mesmo que estejam vazios. tal como o <<b>div</b>>.
+Segue-se a maioria dos elementos de HTML desta categoria:
 
 ```markdown
 | HTML tag     | Descrição                                          |
@@ -202,7 +205,6 @@ dá-se o nome de 'block-level' ao espaço que terá o conteúdo que desejamos te
 | <pre>        |                                                    |
 | <video>      | Define o campo para a visualização de videos       |
 | <audio>      | Define o campo para a leitura de ficheiro de audio |
-| <script>     | Define conteúdo de javascript                      |
 ```
 
 No caso de uma personalização definida pelo, HTML, CSS ou JavaScript a uma parte especifica do texto,
