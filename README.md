@@ -42,4 +42,4 @@ Este ficheiro, não tens mais conteúdo? **Atenção: fiz alguns err0s ortogarfi
 
 Neste espaço, pode-se adicionar **links** para cada um dos vários ficheiros que irão servir como Documentação de ajuda.
 
-[Work Flow](./docs/workflow.md) - Já estou a traduzir algumas coisas do meu blog que também está num outro repositório.
+[Work Flow](./docs/readme.md) - Já estou a traduzir algumas coisas do meu blog que também está num outro repositório.
