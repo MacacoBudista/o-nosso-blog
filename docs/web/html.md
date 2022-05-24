@@ -205,7 +205,7 @@ dá-se o nome de 'block-level' ao espaço que terá o conteúdo que desejamos te
 
 No caso de uma personalização definida pelo, HTML, CSS ou JavaScript a uma parte especifica do texto,
 usa-se elementos que não forçam uma <b> quebra de linha</b> e por isso dá-se o nome de 'inline-level'.
-<br><b>Atenção</b>: O que define o nível de uma tag deve-se ao facto da mesma não ter a tag que define o seu fim,
+<br><b>Atenção</b>: O que define o nível de uma tag deve-se <b>também</b> ao facto da mesma não ter a tag que define o seu fim,
 mas que pode criar uma ou mais quebras de linha, tais como: <<b>br</b>>
 
 ```markdown
