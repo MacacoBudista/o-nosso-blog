@@ -63,6 +63,23 @@ selecionar texto.<br>
 <b>Nota</b>: Para sair do modo <b>visual</b>, usa-se o <b>Esc</b> (tecla Escape )<br>
 <b>Nota</b>: Para sair do modo <b>comando</b>, usa-se o <b>Esc</b> (tecla Escape )
 
+Ao abrir um ficheiro já existente ou criando um novo ficheiro, o mesmo estará associado a um "buffer", que é um espaço
+de memória que o vim está a usar por cada ficheiro que abre na "sessão actual". Assim, imagine-se que por cada vez que
+abrimos o vim, estamos a abrir uma nova sessão e todos os ficheiros que abrimos e\ou criamos, estamos alocados num
+buffer. Para mudar de buffer e\ou de ficheiro, usa-se o comando <b>:bn</b> para "next" e
+<b>:bp</b> para "previous". Porque por vezes pode se tornar dificil seleccionar o buffer que queremos, podemos listar os
+buffers abertos com o comando <b>:ls</b> e dizer directamente o número do ficheiro do buffer que queremos editar.
+<b>:b2</b>. No vi/vim podemos alterar os atalhos originais para se adaptarem ao nosso gosto com o comando <b>map</b>,
+configurado no ficheiro ~/.vim/vimrc. Assim podemos mapear um atalho para mudar de buffer facilmente: <br>
+
+```vimrc
+map <C-n> :bnext<CR> # Ctrl+n - Buffer seguinte
+map <C-p> :bprev<CR> # Ctrl+p - Buffer anterior
+map <C-s> :w<CR> # Ctrl+s - Salva documento
+map <C-q> :q<CR> # Ctrl+q - Sai do exitor
+map <C-w C-q> :wq!<CR> # Ctrl+w Ctrl+q # Salva documento e sai do editor
+```
+
 <hr>
 
 Por fim, será útil adicionar plugins e configurar o vim para ficar mais personalizado e mais fácil de utilizar.
