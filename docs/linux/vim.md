@@ -11,7 +11,7 @@ $ sudo apt install vim
 
 Antes de começar, é bom lembrar que o vi/vim tem pelo menos <b>4</b> modos principais de interação.<br>
 Ao abrir o editor vim estamos em modo de <b>leitura</b>.<br>
-Os outros três modos principais são o de <b>escrita</b> o de <b>selecção</b> e o de <b>comando</b>.<br>
+Os outros três modos principais são o de <b>escrita</b> o de <b>visual</b> e o de <b>comando</b>.<br>
 
 ```sh
 $ vim
@@ -28,28 +28,29 @@ o <b>k</b> à seta (cima), o <b>h</b> à seta (esquerda) e por fim o <b>l</b> à
 <br>Fica uma lista das opções mais usadas com a sua descrição.
 
 ```markdown
-| Modo acessivel | Opção   | Descrição da Opção                                           |
-| -------------- | ------- | ------------------------------------------------------------ |
-| leitura        | j       | cursor anda para baixo                                       |
-| leitura        | k       | cursor anda para cima                                        |
-| leitura        | h       | cursor anda para a esquerda                                  |
-| leitura        | l       | cursor anda para a direita                                   |
-| leitura        | w       | avança uma palavra e posiciona-se no fim da mesma            |
-| leitura        | b       | retrocede uma palavra e posiciona-se no início da mesma      |
-| leitura        | G       | cursor vai até ao fim do documento                           |
-| leitura        | gg      | cursor vai até ao início do documento                        |
-| leitura        | i       | fica em modo de **escrita** na posição actual do cursor      |
-| leitura        | A       | cursor vai até ao fim da linha e fica em modo de **escrita** |
-| leitura        | a       | cursor avança um caracter e fica em modo de **escrita**      |
-| leitura        | x       | apaga o caracter da posição do cursor                        |
-| leitura        | dd      | apaga a linha da posição do cursor                           |
-| leitura        | :w      | salva alteração do ficheiro                                  |
-| leitura        | :q      | sai do editor de texto vim                                   |
-| leitura        | :wqa!   | salva todos os ficheiros abertos a sai do editor             |
-| leitura        | shift+v | selecciona linha do cursor                                   |
-| visual         | yy      | copia conteúdo seleccionado                                  |
-| leitura        | p       | cola conteúdo copiado anteriormente                          |
-| leitura        | R       | substitui o caractér da posição do cursor                    |
+| Modo acessivel | Opção   | Descrição da Opção                                                |
+| -------------- | ------- | ----------------------------------------------------------------- |
+| leitura        | j       | cursor anda para baixo                                            |
+| leitura        | k       | cursor anda para cima                                             |
+| leitura        | h       | cursor anda para a esquerda                                       |
+| leitura        | l       | cursor anda para a direita                                        |
+| leitura        | w       | avança uma palavra e posiciona-se no fim da mesma                 |
+| leitura        | b       | retrocede uma palavra e posiciona-se no início da mesma           |
+| leitura        | G       | cursor vai até ao fim do documento                                |
+| leitura        | gg      | cursor vai até ao início do documento                             |
+| leitura        | i       | fica em modo de **escrita** na posição actual do cursor           |
+| leitura        | A       | cursor vai até ao fim da linha e fica em modo de **escrita**      |
+| leitura        | a       | cursor avança um caracter e fica em modo de **escrita**           |
+| leitura        | x       | apaga o caracter da posição do cursor                             |
+| leitura        | dd      | apaga a linha da posição do cursor                                |
+| leitura        | :w      | salva alteração do ficheiro                                       |
+| leitura        | :q      | sai do editor de texto vim                                        |
+| leitura        | :wqa!   | salva todos os ficheiros abertos a sai do editor                  |
+| leitura        | shift+v | selecciona linha do cursor                                        |
+| leitura        | v       | inicia modo **visual** e estamos prontos para selecionar conteúdo |
+| visual         | yy      | copia conteúdo seleccionado                                       |
+| leitura        | p       | cola conteúdo copiado anteriormente                               |
+| leitura        | R       | substitui o caractér da posição do cursor                         |
 ```
 
 <b>Nota</b>: <mark>Só é possível aceder ao modo de comando : quando estamos em modo de leitura</mark>! <br>
