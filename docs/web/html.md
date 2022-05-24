@@ -222,3 +222,21 @@ mas que pode criar uma ou mais quebras de linha, tais como: <<b>br</b>>
 | <sup>    | Define texto um pouco acima dos outros caractéres         |
 | <small>  | Define texto mais pequeno                                 |
 ```
+
+Todos os elementos podem conter atributos, sendo que dependendo do elemento,
+há atributos que só podem ser usados em elementos especificos,
+como também há atributos que podem ser usados em qualquer elemento de HTML.
+Assim seguem-se alguns exemplos:
+
+```markdown
+| HTML tag | Atributo | Descrição                         |
+| -------- | -------- | --------------------------------- |
+| <a>      | href=""  | Para definir a fonte do link      |
+| <div>    | class="" | Para definir a classe do elemento |
+| <p>      | style="" | Para definir o estilo do elemento |
+```
+
+Com estes conceitos em mente, pode-se avançar no HTML e começar a estudar [CSS](./css.md)
+
+Por fim, fica um exemplo de um ficheiro [HTML](./exemplos/html_completo/exemplo-para-usar-com-css.html) que irá usar o maior número de exemplos,
+para praticar os conhecimentos acima referidos como também para uso posterior com o CSS.
