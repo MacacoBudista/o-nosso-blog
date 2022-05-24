@@ -1,6 +1,6 @@
 <h3> Cool JavaScript APIs </h3>
 
-| [HTML](https://html.spec.whatwg.org/multipage/) | HTMP Specification |
+| [HTML](https://html.spec.whatwg.org/multipage/) | HTTP Specification |
 | [fetch()](https://fetch.spec.whatwg.org/) | HTTP Fetch Specification |
 | [DOM](https://dom.spec.whatwg.org/) | HTML Document Object Model Specification |
 | [Streams](https://streams.spec.whatwg.org/) | HTML Streams Specification |
