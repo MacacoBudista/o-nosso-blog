@@ -73,11 +73,11 @@ buffers abertos com o comando <b>:ls</b> e dizer directamente o número do fiche
 configurado no ficheiro ~/.vim/vimrc. Assim podemos mapear um atalho para mudar de buffer facilmente: <br>
 
 ```vimrc
-map <C-n> :bnext<CR> # Ctrl+n - Buffer seguinte
-map <C-p> :bprev<CR> # Ctrl+p - Buffer anterior
-map <C-s> :w<CR> # Ctrl+s - Salva documento
-map <C-q> :q<CR> # Ctrl+q - Sai do exitor
-map <C-w C-q> :wq!<CR> # Ctrl+w Ctrl+q # Salva documento e sai do editor
+map <C-n> :bnext<CR> " Ctrl+n - Buffer seguinte
+map <C-p> :bprev<CR> " Ctrl+p - Buffer anterior
+map <C-s> :w<CR> " Ctrl+s - Salva documento
+map <C-q> :q<CR> " Ctrl+q - Sai do exitor
+map <C-w C-q> :wq!<CR> " Ctrl+w Ctrl+q # Salva documento e sai do editor
 ```
 
 <hr>
