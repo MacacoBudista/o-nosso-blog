@@ -165,3 +165,56 @@ Outro tipo de listas podem ser considerados, também usados para os campos de me
 ```
 
 [página com os exemplos referidos acima](./exemplos/html-exemplo-formatar-text.html)
+
+Nesta noção de que cada elemento abrange um espaço próprio, pois cada tag define o principio e o fim do conteúdo dessa
+tag e no fim de cada elemento, existe uma <b>quebra de linha</b>,
+dá-se o nome de 'block-level' ao espaço que terá o conteúdo que desejamos ter, nos seguintes elementos de HTML:
+
+```markdown
+| HTML tag     | Descrição                                          |
+| ------------ | -------------------------------------------------- |
+| <aside>      | Usado para conteúdos (publicidade) ou Menus        |
+| <address>    | Usado para descrever uma morada                    |
+| <articles>   | Usado para estruturar artigos de blogs             |
+| <canvas>     | Usado para criar figuras e animações para jogos    |
+| <dd>         |                                                    |
+| <ul>         | Define um campo de uma lista não ordenada          |
+| <ol>         | Define um campo de uma lista ordenada              |
+| <li>         | Define um elemento de uma lista                    |
+| <p>          | Define um parágrafo                                |
+| <h1>/<h6>    | Define Titulo ou tópico destacado                  |
+| <div>        | Elemento usado para agrupar outros elementos       |
+| <section>    |                                                    |
+| <table>      | Define uma tabela                                  |
+| <dt>         |                                                    |
+| <hr>         | Linha horizontal que ocupa parte da página         |
+| <header>     | Define o cabeçalho de um elemento composto         |
+| <dl>         |                                                    |
+| <form>       | Forma: usado para criar formas interactivas        |
+| <main>       | Define o campo principal da página                 |
+| <footer>     | Define o campo inferior da página                  |
+| <fieldset>   |                                                    |
+| <figcaption> |                                                    |
+| <figure>     |                                                    |
+| <nav>        | Define menus de navegação                          |
+| <pre>        |                                                    |
+| <video>      | Define o campo para a visualização de videos       |
+| <audio>      | Define o campo para a leitura de ficheiro de audio |
+| <script>     | Define conteúdo de javascript                      |
+```
+
+No caso de uma personalização definida pelo, HTML, CSS ou JavaScript a uma parte especifica do texto,
+usa-se elementos que não forçam uma <b> quebra de linha</b> e por isso dá-se o nome de 'inline-level'.
+<br><b>Atenção</b>: O que define o nível de uma tag deve-se ao facto da mesma não ter a tag que define o seu fim,
+mas que pode criar uma ou mais quebras de linha, tais como: <<b>br</b>>
+
+```markdown
+| HTML Tag | Descrição                                                 |
+| -------- | --------------------------------------------------------- |
+| <span>   | Marca parte de conteúdo para ser modificado via CSS ou JS |
+| <a>      | Define um link ( interno ou externo )                     |
+| <i>      | Define o estilo de fonte em modo itálico                  |
+| <sub>    | Define texto um pouco abaixo dos outros caractéres        |
+| <sup>    | Define texto um pouco acima dos outros caractéres         |
+| <small>  | Define texto mais pequeno                                 |
+```
