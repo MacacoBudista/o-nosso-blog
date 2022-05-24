@@ -240,3 +240,7 @@ Com estes conceitos em mente, pode-se avançar no HTML e começar a estudar [CSS
 
 Por fim, fica um exemplo de um ficheiro [HTML](./exemplos/html_completo/exemplo-para-usar-com-css.html) que irá usar o maior número de exemplos,
 para praticar os conhecimentos acima referidos como também para uso posterior com o CSS.
+
+<hr>
+
+Aqui iremos continuar a falar de atributos, APIs e outras caracteristicas do HTML que ainda não foram abordadas!
