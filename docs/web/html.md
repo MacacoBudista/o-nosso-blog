@@ -1,5 +1,7 @@
 # HTML
 
+Documentação personalizada:
+
 ## Hyper Text Markup Language
 
 O HTML é estruturado com <b>tags</b>, que são letras ou palavras que estão entre '<' e '>'.
