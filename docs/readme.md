@@ -16,8 +16,6 @@
 
 ## Lista de Programas que facilitam a vida do desenvolvimento de software
 
-Estes serão os programas mais usados para desenvolver código para a web:
-
 | Programa    | Breve Descrição                                                 | Site Original                         | Notas do Blog            |
 | ----------- | --------------------------------------------------------------- | ------------------------------------- | ------------------------ |
 | <b>GIT</b>  | Ferramenta essencial para interagir com o github via o terminal | [Fonte](https://www.git-scm.com/)     | [Notas](./linux/git.md)  |
@@ -26,3 +24,10 @@ Estes serão os programas mais usados para desenvolver código para a web:
 | <b>TMUX</b> | Permite ter várias "tabs" num único terminal                    | [Fonte](https://github.com/tmux/tmux) | [Notas](./linux/tmux.md) |
 | <b>NVM</b>  | Permite instalar o NodeJS sem permissões administrativas        | [Fonte](https://npmjs.com)            | [Notas](./linux/nvm.md)  |
 | <b>GPG</b>  | Permite encriptar ficheiros e desincriptar                      | [Fonte](https://gnupg.org)            | [Notas](./linux/gpg.md)  |
+
+## Lista de distribuições Linux usada
+
+| Distribuição                          | Base do código |
+| ------------------------------------- | -------------- |
+| [Gentoo](./distros/Gentoo_Install.md) | Fonte          |
+| Debian                                | Pré-compilado  |
