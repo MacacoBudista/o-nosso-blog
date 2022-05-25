@@ -6,6 +6,7 @@ $ mkdir .vim
 $ cd .vim
 $ touch vimrc
 $ vim vimrc
+```
 
 Adicionar configuração:
 
@@ -82,9 +83,9 @@ Ainda se pode adicionar plugins para nos auxiliar na edição de código.
 
 Ainda no ficheiro de configuração ~/.vim/vimrc:
 
+```sh
 call plug#begin(~/.config/vim/plugged) # os plugins ficaram nesta pasta
 
-```sh
 " css3 syntax highlight
 Plug 'hail2u/vim-css3-syntax'
 
