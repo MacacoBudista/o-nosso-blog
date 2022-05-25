@@ -1,8 +1,4 @@
 {
-	"name": "o-nosso-blog",
-	"version": "1.0.0",
-	"description": "## Este será o nosso blog.",
-	"private": true,
 	"directories": {
 		"doc": "docs"
 	},
@@ -11,11 +7,6 @@
 		"type": "git",
 		"url": "git+https://github.com/MacacoBudista/o-nosso-blog.git"
 	},
-	"keywords": [],
-	"author": "OscarFM",
-	"contributors": [
-		"saraalexan"
-	],
 	"bugs": {
 		"url": "https://github.com/MacacoBudista/o-nosso-blog/issues"
 	},
