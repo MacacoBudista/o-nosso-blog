@@ -1,5 +1,7 @@
 # Instalação do Gentoo Linux
 
+## Introdução:
+
 O Gentoo Linux é uma distribuição baseada no código fonte e por isso,
 o processo de instalação é demorado, pois é necessário compilar todos os programas que queremos instalar.
 
@@ -19,7 +21,7 @@ a maioria dos utilizadores tenta instalar o mínimo possível para poupar tempo 
 
 As actualizações distribuidas pela comunidade de desenvolvimento do Gentoo Linux, têm uma frequência de 1 semana.
 Caso o utilizador do Gentoo não tenha uma máquina rápida, irá passar possivelmente horas ou dias para fazer uma
-actualização.
+actualização, em caso de programas pesados, tais como o gcc, firefox, rust, etc...
 
 O Lado mais interessante neste processo de instalação, está na leitura da documentação oficial,
 e na experiencia que o Gentoo oferece, sendo que na comparação da instalação do Linux From Scratch,
@@ -51,7 +53,7 @@ Como se pode imaginar, o Gentoo Linux é para utilizadores experientes, pois o p
 conhecimento prévio de como o Linux está estruturado e que tipo de software o utlizadores irá instalar.
 Todas estas informações são relevantes antes de começar a instalação.
 
-- Usaremos a versão estável ( amd64 ) ou a instável ( ~amd64 ?
+- Usaremos a versão estável ( amd64 ) ou a instável ( ~amd64 ) ?
 - Será um servidor ou um desktop?
 - É um servidor Web, proxy, email ?
 - O desktop usará KDE, Gnome, XFCE, outro..
@@ -80,6 +82,40 @@ Antes de iniciar é importante pensar na estrutura da disco e que tipo de parti�
 Se o computador usar BIOS antigas, o uso de partições EFI é desnecessária, mas com computadores recentes, é obrigatório,
 de forma a ser possível fazer o boot da instalação do Gentoo.
 
+### Preparação da Instalação
+
 Na consideração que iremos usar uma distribuição em modo LiveCD que já tem interface gráfica e que usa um kernel com
 firmware actualizado, podemos arriscar arrancar de forma a reconhecer todos os periférios / componentes do nosso computador,
-vou considerar usarmos um Xubuntu por exemplo.
+vou considerar usarmos um Xubuntu por exemplo que normalmente tem a capacidade de reconhecer todos os compotentes de
+hardware dos novos e\ou mais recentes computadores / portateis. Vamos então criar uma pen que seja capaz de fazer o boot
+do nosso iso.
+
+```sh
+# Forma simples de criar uma pen com o iso que desejamos usar para instalar o Gentoo
+# Se os comandos forem algo de estranho,
+# por favor leia mais sobre o assunto antes de copiar o código sem pensar o que está a fazer !
+sudo fdisk /dev/sdb # disco do USB
+sudo mkfs.vfat -F32 /dev/sdb1 # Formatar em FAT32
+sudo dd if=xubuntu.iso of=/dev/sdb bs=2M status=progress; sudo sync # copia do ISO para o USB
+```
+
+A comunidade do Gentoo já oferece algumas opções dos ficheiros de instalação, personalizados com as possíveis escolhas.
+Estas opções são associadas aos perfis que podem ser aplicados no Gentoo. Este assunto será abordado no passo de
+Instalação. Configure a BIOS para iniciar o boot a partir do disco do USB e iniciamos o nosso "LiveCD".
+
+A maioria dos ISOs que o Gentoo Linux oferece não têm interface gráfica e aquele que tem é enorme e nem sempre tem as
+drivers que são necessárias no kernel para reconhecer hardware recente. Imagine-se que a placa de rede não é reconhecida
+e como tal, é impossível continuar a instalação.
+
+Vamos considerar que o ISO usado da última versão do Xubuntu, reconhece todos os periférios do nosso computador e
+estamos prontos para iniciar a instação do Gentoo. Vamos considerar também que temos um disco de 500GB para usar.
+
+Ao fazer login, usamos o NetworkManager para nos ligarmos à internet, abrimos um terminal e digitamos:
+
+```sh
+$ ping -c3 google.pt # confirmar que temos coneção
+$ sudo su -l # Escalar para o Super Utilizador root
+```
+
+Agora que temos permissões de root podemos começar a instalação. <br>
+A primeira consideração a fazer é o disco. Quais as partições a definir, qual o tipo de ficheiro e que permissões tem.
