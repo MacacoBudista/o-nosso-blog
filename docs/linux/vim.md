@@ -95,6 +95,7 @@ Atenção: Uma das melhores formas de configurar o vim é ter as várias opçõe
 leitura e a configuração e\ou manutenção.
 
 ```vimrc
+" ~/.vim/vimrc
 source ~/.vim/config/settings
 source ~/.vim/config/macros
 source ~/.vim/config/plugins
