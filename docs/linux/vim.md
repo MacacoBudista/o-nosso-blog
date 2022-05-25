@@ -28,32 +28,32 @@ o <b>k</b> à seta (cima), o <b>h</b> à seta (esquerda) e por fim o <b>l</b> à
 <br>Fica uma lista das opções mais usadas com a sua descrição.
 
 ```markdown
-| Modo acessivel | Opção                     | Descrição da Opção                                                |
-| -------------- | ------------------------- | ----------------------------------------------------------------- |
-| leitura        | j                         | cursor anda para baixo                                            |
-| leitura        | k                         | cursor anda para cima                                             |
-| leitura        | h                         | cursor anda para a esquerda                                       |
-| leitura        | l                         | cursor anda para a direita                                        |
-| leitura        | w                         | avança uma palavra e posiciona-se no fim da mesma                 |
-| leitura        | b                         | retrocede uma palavra e posiciona-se no início da mesma           |
-| leitura        | G                         | cursor vai até ao fim do documento                                |
-| leitura        | gg                        | cursor vai até ao início do documento                             |
-| leitura        | i                         | fica em modo de **escrita** na posição actual do cursor           |
-| leitura        | A                         | cursor vai até ao fim da linha e fica em modo de **escrita**      |
-| leitura        | a                         | cursor avança um caracter e fica em modo de **escrita**           |
-| leitura        | x                         | apaga o caracter da posição do cursor                             |
-| leitura        | dd                        | apaga a linha da posição do cursor                                |
-| leitura        | 0                         | cursor posiciona-se no início da linha                            |
-| leitura        | /                         | inicia procura                                                    |
-| comando        | :%s/palavra/substituição/ | substitui palavra seleccionada por...                             |
-| comando        | :w                        | salva alteração do ficheiro                                       |
-| comando        | :q                        | sai do editor de texto vim                                        |
-| comando        | :wqa!                     | salva todos os ficheiros abertos a sai do editor                  |
-| leitura        | shift+v                   | selecciona linha do cursor                                        |
-| leitura        | v                         | inicia modo **visual** e estamos prontos para selecionar conteúdo |
-| visual         | yy                        | copia conteúdo seleccionado                                       |
-| leitura        | p                         | cola conteúdo copiado anteriormente                               |
-| leitura        | R                         | substitui o caractér da posição do cursor                         |
+| Modo acessivel | Opção    | Descrição da Opção                                                |
+| -------------- | -------- | ----------------------------------------------------------------- |
+| leitura        | j        | cursor anda para baixo                                            |
+| leitura        | k        | cursor anda para cima                                             |
+| leitura        | h        | cursor anda para a esquerda                                       |
+| leitura        | l        | cursor anda para a direita                                        |
+| leitura        | w        | avança uma palavra e posiciona-se no fim da mesma                 |
+| leitura        | b        | retrocede uma palavra e posiciona-se no início da mesma           |
+| leitura        | G        | cursor vai até ao fim do documento                                |
+| leitura        | gg       | cursor vai até ao início do documento                             |
+| leitura        | i        | fica em modo de **escrita** na posição actual do cursor           |
+| leitura        | A        | cursor vai até ao fim da linha e fica em modo de **escrita**      |
+| leitura        | a        | cursor avança um caracter e fica em modo de **escrita**           |
+| leitura        | x        | apaga o caracter da posição do cursor                             |
+| leitura        | dd       | apaga a linha da posição do cursor                                |
+| leitura        | 0        | cursor posiciona-se no início da linha                            |
+| leitura        | /        | inicia procura                                                    |
+| comando        | :%s/a/b/ | substitui primeira occurrencia de 'a' por 'b'.                    |
+| comando        | :w       | salva alteração do ficheiro                                       |
+| comando        | :q       | sai do editor de texto vim                                        |
+| comando        | :wqa!    | salva todos os ficheiros abertos a sai do editor                  |
+| leitura        | shift+v  | selecciona linha do cursor                                        |
+| leitura        | v        | inicia modo **visual** e estamos prontos para selecionar conteúdo |
+| visual         | yy       | copia conteúdo seleccionado                                       |
+| leitura        | p        | cola conteúdo copiado anteriormente                               |
+| leitura        | R        | substitui o caractér da posição do cursor                         |
 ```
 
 <b>Nota</b>: <mark>Só é possível aceder ao modo de <b>comando</b> : quando estamos em modo de leitura</mark>! <br>
@@ -73,14 +73,31 @@ buffers abertos com o comando <b>:ls</b> e dizer directamente o número do fiche
 configurado no ficheiro ~/.vim/vimrc. Assim podemos mapear um atalho para mudar de buffer facilmente: <br>
 
 ```vimrc
-map <C-n> :bnext<CR> " Ctrl+n - Buffer seguinte
-map <C-p> :bprev<CR> " Ctrl+p - Buffer anterior
+map <C-p> :bprev<CR>
+map <C-n> :bnext<CR>
+```
+
+Outros exemplos de comandos comuns a outros editores de texto
+
+```vimrc
 map <C-s> :w<CR> " Ctrl+s - Salva documento
 map <C-q> :q<CR> " Ctrl+q - Sai do exitor
-map <C-w C-q> :wq!<CR> " Ctrl+w Ctrl+q # Salva documento e sai do editor
 ```
+
+Para abrir um novo ficheiro num novo buffer, usa-se o :e ~/ficheiro.txt
 
 <hr>
 
 Por fim, será útil adicionar plugins e configurar o vim para ficar mais personalizado e mais fácil de utilizar.
 Fica um dos vários exemplos de como configurar o vim em mais detalhe: [aqui](./vim_config.md)
+
+Atenção: Uma das melhores formas de configurar o vim é ter as várias opções em diferentes ficheiros, para facilitar a
+leitura e a configuração e\ou manutenção.
+
+```vimrc
+source ~/.vim/config/settings
+source ~/.vim/config/macros
+source ~/.vim/config/plugins
+source ~/.vim/config/shorcuts
+source ~/.vim/config/colors
+```
