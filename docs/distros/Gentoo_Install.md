@@ -1,5 +1,7 @@
 # Instalação do Gentoo Linux
 
+Este tutorial assume que está familiarizad@ com o uso do Linux e assuntos relacionados com a arquitectura do computador.
+
 ## Introdução:
 
 O Gentoo Linux é uma distribuição baseada no código fonte e por isso,
@@ -118,4 +120,82 @@ $ sudo su -l # Escalar para o Super Utilizador root
 ```
 
 Agora que temos permissões de root podemos começar a instalação. <br>
-A primeira consideração a fazer é o disco. Quais as partições a definir, qual o tipo de ficheiro e que permissões tem.
+A primeira consideração a fazer é o esquema do disco.
+<br> Quais as partições a definir, qual o tipo de ficheiro e que permissões tem.
+
+Na consideração que não temos um problema obcessivo com a segurança, podemos saltar um grande número de passos,
+que consideram encriptar o disco de forma a ser quase impossível ter acesso aos dados do disco, sem a chave de
+desincriptação. Vamos imaginar que a segurança é uma preocupação, mas não estamos focados nessa problemática.
+Mesmo assim iremos definir e falar de vários aspectos da segurança do Gentoo nesta nossa instalação.
+
+Este documento irá focar a instalaçáo de uma máquina que irá servir de servidor sem interface gráfica.
+
+Falemos então sobre a estrutura de partições do disco que iremos usar.<br>
+Este esquema será útil quando editarmos o ficheiro /etc/fstab <br>
+<b>Nota</b>: Se o disco usado não é novo e teme que possa haver vestígios de virus, worms e trojans, recomenda-se a
+formatação do disco, antes de definir o esquema de partições ( GPT / msdos )<br>
+
+```sh
+# Paranoid moment: Este processo pode demorar várias horas, dependendo do tamanho do disco
+dd if=/dev/urandom of=/dev/sda
+dd if=/dev/zero of=/dev/sda
+```
+
+| Disco    | Partição  | Tamanho | Ponto de montagem | Sistema de Ficheiros | opções      | Objectivo                         |
+| -------- | --------- | ------- | ----------------- | -------------------- | ----------- | --------------------------------- |
+| /dev/sda | /dev/sda1 | 2MB     | none              | none                 | none        | grub install                      |
+| /dev/sda | /dev/sda2 | 200MB   | /boot             | vfat                 | ro          | ficheiros de boot                 |
+| /dev/sda | /dev/sda3 | 2GB     | none              | swap                 | defaults    | partição de memória fisica (swap) |
+| /dev/sda | /dev/sda4 | 50GB    | /                 | ext4                 | ro,defaults | partição root                     |
+| /dev/sda | /dev/sda5 | 50GB    | /var              | ext4                 | defaults    | partição var                      |
+| /dev/sda | /dev/sda6 | 50GB    | /var/log          | ext4                 | defaults    | partição de logs                  |
+| /dev/sda | /dev/sda7 | 50GB    | /usr              | ext4                 | ro,defaults | partição usr                      |
+| /dev/sda | /dev/sda8 | 10GB    | /tmp              | ext4                 | ro,defaults | partição usr                      |
+| /dev/sda | /dev/sda9 | 100%    | /home             | ext4                 | ro,defaults | partição home                     |
+
+Mais tarde iremos explorar melhor as "opções" referidas no esquema para melhorar a segurança e para melhor a performance.
+
+Com este esquema em mente, usamos o <b>fdisk</b> ou o <b>cfdisk</b> para definir as nossas partições.
+Gravamos as alterações e saimos.
+
+Esta na altura de formatar as partições definidas.
+
+```sh
+mkfs.vfat -F32 /dev/sda2
+mkfs.ext4 /dev/sda4
+mkfs.ext4 /dev/sda5
+mkfs.ext4 /dev/sda6
+mkfs.ext4 /dev/sda7
+mkfs.ext4 /dev/sda8
+mkfs.ext4 /dev/sda9
+mkswap /dev/sda3
+swapon /dev/sda3
+```
+
+Agora temos de fazer mount das partições de forma a termos o disco preparado para a instalação do Gentoo.
+
+```sh
+mkdir /mnt/gentoo
+mount -t ext4 /dev/sda4 /mnt/gentoo
+mkdir -p /mnt/gentoo/{var/log,usr,tmp,home,boot}
+mount -t ext4 /dev/sda5 /mnt/gentoo/var
+mount -t ext4 /dev/sda6 /mnt/gentoo/var/log
+mount -t ext4 /dev/sda7 /mnt/gentoo/usr
+mount -t ext4 /dev/sda8 /mnt/gentoo/tmp
+mount -t ext4 /dev/sda9 /mnt/gentoo/home
+```
+
+Só iremos fazer mount da partição boot quando estivermos em chroot. <br>
+Agora vamos para a posição do disco /mnt/gentoo, e fazer download dos ficheiros de instalação.<br>
+Neste caso imagine-se que estamos a usar uma máquina que suporta 64bits. <br>
+Considere-se também que o sistema de gestão de serviços é o OpenRC e não o Systemd. <br>
+Sendo que a segurança é uma preocupação e será para um servidor, aconselha-se a versão do Stage3: Hardener-No-Multilib-OpenRC
+
+```sh
+cd /mnt/gentoo
+firefox https://ftp.jaist.ac.jp/pub/Linux/Gentoo//releases/amd64/autobuilds/current-stage3-amd64-openrc/
+```
+
+A transferência dos ficheiros associados é recomendado pois é bom seguir as boas práticas de segurança.
+É importante verificar as hashes dos ficheiros, para termos a certeza que não foram modificados antes de descompactar os
+ficheiros de instalação.
