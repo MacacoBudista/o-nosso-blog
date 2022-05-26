@@ -199,3 +199,75 @@ firefox https://ftp.jaist.ac.jp/pub/Linux/Gentoo//releases/amd64/autobuilds/curr
 A transferência dos ficheiros associados é recomendado pois é bom seguir as boas práticas de segurança.
 É importante verificar as hashes dos ficheiros, para termos a certeza que não foram modificados antes de descompactar os
 ficheiros de instalação.
+
+```sh
+openssl dgst -r -sha512 stage3-amd64-release><-init<.tar.?>bz2|xz)
+sha512sum stage3-amd64-release><-init<.tar.?()bz2|xz)>
+openssl dgst -r -whirlpool stage3-amd64-release><-init<.tar.?>bz2|xz)
+gpg --verify stage3-amd64-release><-init><.tar.?bz2|xz)(.DIGESTS.asc)
+```
+
+Considerando que a sequència é igual descompacta-se o ficheiro.
+
+```sh
+pwd
+/mnt/gentoo
+tar xfp stage3-amd64-*.tar.xz --xattrs-include='*.*' --numeric-owner
+```
+
+Em seguida é importante editar alguns ficheiros, tais como:
+
+```sh
+/etc/conf.d/keymaps # configura a língua do teclado ( pt-latin9 )
+/etc/conf.d/hostname # nome da máquina ( server )
+/etc/conf.d/net # configura rede
+/etc/hosts # configura máquinas conhecidas e filtra conteúdos
+/etc/issue.net # mensagem de boas vindas via ssh
+/etc/issue # mensagem de boas vindas
+/etc/fstab # descrição do esquema de partições
+/etc/locale-gen # configura língua do sistema
+# por fim
+/etc/portage/make.conf # Configurações do gentoo
+```
+
+A documentação sugere a leitura dos seguintes links para a definição do ficheiro make.conf
+
+1. https://wiki.gentoo.org/wiki/GCC_optimization
+2. https://wiki.gentoo.org/wiki/MAKEOPTS
+3. https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html
+
+Definir Servidor DNS
+
+```sh
+cp /etc/resolv.conf /mnt/gentoo/etc/resolv.conf -L
+```
+
+Fazer o mount de pseudo-partições ( necessárias )
+
+```sh
+mount --types proc /proc /mnt/gentoo/proc
+mount --rbind /sys /mnt/gentoo/sys
+mount --rbind /dev /mnt/gentoo/dev
+```
+
+Vamos começar finalmente a instalação.
+
+```sh
+chroot /mnt/gentoo /bin/bash
+env-update && source /etc/profile
+passwd # define pass para o utlizador root
+mount /dev/sda2 /boot # já podemos fazer mount da partição /boot
+emerge-websync # actualiza o "portage"
+emerge -uNDav @world # Actualiza o sistema
+emerge -av gentoo-sources linux-firmware dhcp grub
+cd /usr/src/linux
+make menuconfig # configura kernel
+make && make modules && make modules_install && make install
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+exit
+reboot
+```
+
+# FIM
