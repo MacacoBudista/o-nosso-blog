@@ -210,7 +210,7 @@ Segue-se a maioria dos elementos de HTML desta categoria:
 No caso de uma personalização definida pelo, HTML, CSS ou JavaScript a uma parte especifica do texto,
 usa-se elementos que não forçam uma <b> quebra de linha</b> e por isso dá-se o nome de 'inline-level'.
 <br><b>Atenção</b>: O que define o nível de uma tag deve-se <b>também</b> ao facto da mesma não ter a tag que define o seu fim,
-mas que pode criar uma ou mais quebras de linha, tais como: <<b>br</b>>
+mas que pode criar uma ou mais quebras de linha, tais como: <b>br</b>>
 
 ```markdown
 | HTML Tag | Descrição                                                 |
@@ -229,11 +229,13 @@ como também há atributos que podem ser usados em qualquer elemento de HTML.
 Assim seguem-se alguns exemplos:
 
 ```markdown
-| HTML tag | Atributo | Descrição                         |
-| -------- | -------- | --------------------------------- |
-| <a>      | href=""  | Para definir a fonte do link      |
-| <div>    | class="" | Para definir a classe do elemento |
-| <p>      | style="" | Para definir o estilo do elemento |
+| HTML tag | Atributo  | Descrição                         |
+| -------- | --------  | --------------------------------- |
+| <a>      | href=""   | Para definir a fonte do link      |
+| <div>    | class=""  | Para definir a classe do elemento |
+| <p>      | style=""  | Para definir o estilo do elemento |
+| <form>   | action="" | Forma para definir acção          |
+|          |           |                                   |
 ```
 
 Com estes conceitos em mente, pode-se avançar no HTML e começar a estudar [CSS](./css.md)
