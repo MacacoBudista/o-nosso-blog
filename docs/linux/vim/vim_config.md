@@ -1,5 +1,7 @@
 Criar pasta para conter os ficheiros de configuração
 
+Ler o [Livro](http://ftp.vim.org/ftp/editors/vim/doc/book/vimbook-OPL.pdf) gratuitamente! 
+
 ````sh
 $ cd ~
 $ mkdir .vim
