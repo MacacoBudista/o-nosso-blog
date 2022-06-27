@@ -125,7 +125,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Ainda no ficheiro de configuração ~/.vim/vimrc:
+Para acrescentar um plugin, editar o ficheiro de configuração ~/.vim/vimrc e acrescentar.
+
+Como poderemos ver, cada plugin refere a conta de github do criador / o nome do repositório do plugin
 
 ```sh
 call plug#begin(~/.config/vim/plugged) # define o caminho de preferencia
@@ -180,4 +182,3 @@ Plug 'mhinz/vim-startify'
 call plug#end()
 ```
 
-Ainda se pode configurar cada plugin e modificar atalhos via <b>macros</b>
