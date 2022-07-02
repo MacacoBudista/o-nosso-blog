@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Como configurar o lftp</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+      <h3> Setup ~/.config/lftp/lftp.conf </h3>
+    </div>
+    <div class="container">
+      <div class="block">
+    <code class="settings">
+        <span class="item">alias dir ls<span>
+        <span class="item">alias less more<span>
+        <span class="item">alias zless zmore<span>
+        <span class="item">alias bzless bzmore<span>
+        <span class="item">alias reconnect "close; cache flush; cd ."<span>
+        <span class="item">set ftp:sync-mode off<span>
+        <span class="item">set xfer:max-redirections 10<span>
+        <span class="item">set at-exit<span>
+        <span class="item">set cmd:term-status/*screen* "\e_\T\e\\"<span>
+        <span class="item">set cmd:set-term-status on<span>
+        <span class="item">dns:order "inet"<span>
+    </code></div>
+  </body>
+</html>
+

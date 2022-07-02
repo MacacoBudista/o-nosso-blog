@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Como configurar o Mutt</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+      <h3> Setup ~/.muttrc </h3>
+    </div>
+    <div class="container">
+      <div class="block">
+    <code class="settings">
+                <span class="item">set realname = 'Monkey'<span>
+                <span class="item">set charset = 'utf-8'<span>
+                <span class="item">set send_charset = 'utf-8'<span>
+                <span class="item">set move = no<span>
+                <span class="item">set mark_old = no<span>
+                <span class="item">set arrow_cursor = no<span>
+                <span class="item">set quit = yes<span>
+                <span class="item">set delete = yes<span>
+                <span class="item">set sort = threads<span>
+    </code></div>
+    <div class="block"><code class="settings">
+                <span class="item">set ssl_startssl = yes<span>
+                <span class="item">set ssl_force_tls = yes<span>
+    </code></div>
+    <div class="block"><code class="settings">
+                <span class="item">unset imap_passive<span>
+                <span class="item">set imap_keepalive = 60<span>
+                <span class="item">set mail_check = 120<span>
+                <span class="item">set imap_check_subscribed = no<span>
+    </code></div>
+    <div class="block"><code class="settings">
+                <span class="item">set abort_nosubject = yes<span>
+                <span class="item">set mail_check_stats = yes<span>
+                <span class="item">set mail_check_stats_interval = 60<span>
+    </code></div>
+    <div class="block"><code class="settings">
+                <span class="item">set mailcap_path = ~/.mutt/mailcap<span>
+                <span class="item">set editor = 'vim'<span>
+    </code></div>
+    <div class="block"><code class="settings">
+                <span class="item">set index G imap-fetch-mail<span>
+    </code></div>
+    <div class="block"><code class="settings">
+                <span class="item">color normal default default<span>
+                <span class="item">color message cyan default<span>
+                <span class="item">color status yellow black<span>
+                <span class="item">color error red default<span>
+                <span class="item">mono error bold<span>
+                <span class="item">color quoted1 grey default<span>
+                <span class="item">color quoted2 darkgrey default<span>
+    </code></div>
+    <div class="block"><code class="settings">
+        <span class="item">set from = 'monkey@mail.org'</span>
+        <span class="item">set smtp_authenticator='login:plain'</span>
+        <span class="item">set folder='imaps://monkey@mail.org@imap.mail.org:993</span>
+        <span class="item">set smtp_url='smtps://monkey@mail.org@smtp.mail.org:465</span>
+    </code></div>
+    <div class="block"><code class="settings">
+        <span class="item">set include = ask-yes</span>
+        <span class="item">set copy = no</span>
+        <span class="item">set pager = 'lynx'</span>
+        <span class="item">set postpone = ask-yes</span>
+    </code></div>
+    <div class="block"><code class="settings">
+        <span class="item">
+set header_cache = "~/.mutt/accounts/external/monkey/cache/headers" 
+
+        </span>
+        <span class="item">
+
+set message_cachedir = "~/.mutt/accounts/external/monkey/cache/bodies"
+        </span>
+        <span class="item">
+
+set certificate_file = "~/.mutt/accounts/external/monkey/certificates"
+        </span>
+    </code></div>
+    <div class="block"><code class="settings">
+                <span class="item">
+color body brightred default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # Email addresses
+
+                  <span>
+                <span class="item">
+
+color body brightblue default "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URL
+                  <span>
+    </code></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+

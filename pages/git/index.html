@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Como configurar o git </title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+      <h3> Setup ~/.gitconfig </h3>
+    </div>
+    <div class="container">
+      <div class="block">
+    <code class="settings"> 
+        <span class="item">[commit]<span>
+        <span class="item">gpgsign = false<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[user]<span>
+        <span class="item">name = MyName<span>
+        <span class="item">email = user@domain.org<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[transfer]<span>
+        <span class="item">fsckobjects = true<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[fetch]<span>
+        <span class="item">fsckobjects = true<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[receive]<span>
+        <span class="item">fsckobjects = true<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[push]<span>
+        <span class="item">default = simple<span>
+        <span class="item">followTags = true<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[color]<span>
+        <span class="item">branch = auto<span>
+        <span class="item">diff = auto<span>
+        <span class="item">status = auto<span>
+        <span class="item">ui = true<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[credential]<span>
+        <span class="item">username= ghp_token<span>
+        <span class="item">passwork = ghp_token<span>
+        <span class="item">helper = cache --timeout=3000<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[core]<span>
+        <span class="item">editor = vim<span>
+        <span class="item">pager = less -F -X<span>
+        <span class="item">gitProxy = ssh<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[init]<span>
+        <span class="item">templatedir = ~/.git_template<span>
+    </code></div><div class="block">
+    <code class="settings">
+        <span class="item">[pull]<span>
+        <span class="item">rebase = false<span>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+

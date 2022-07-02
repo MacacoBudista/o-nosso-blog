@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Como configurar o Vim</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+      <h3> Setup ~/.vim/vimrc </h3>
+    </div>
+    <div class="container">
+      <div class="block">
+    <code class="settings"> 
+      <span class="item">set shortmess+=Ia</span><br>
+      <span class="item">set ttimeout</span><br>
+      <span class="item">set ttimeoutlen=0</span><br>
+ <span class="item"> set helpheight=30</span><br>
+ <span class="item"> set undolevels=3000</span><br>
+ <span class="item"> set history=10000</span><br>
+ <span class="item"> set cmdheight=1</span><br>
+ <span class="item"> set t_Co=256</span><br>
+ <span class="item"> set path+=**</span><br>
+ <span class="item"> set nomore</span><br>
+ <span class="item"> set nowrap</span><br>
+ <span class="item"> set wrapmargin=0</span><br>
+ <span class="item"> set equalalways</span><br>
+ <span class="item"> set sidescrolloff=999</span><br>
+ <span class="item"> set scrolloff=999</span><br>
+ <span class="item"> set encoding=utf8</span><br>
+    </code></div><div class="block">
+    <code class="settings">
+ <span class="item"> set nocompatible</span><br>
+ <span class="item"> set novisualbell</span><br>
+ <span class="item"> set noerrorbells</span><br>
+ <span class="item"> set ignorecase</span><br>
+ <span class="item"> set smartcase</span><br>
+ <span class="item"> set foldenable</span><br>
+ <span class="item"> set foldcolumn=0</span><br>
+ <span class="item"> set foldmethod=marker</span><br>
+ <span class="item"> set foldmethod=indent</span><br>
+ <span class="item"> set foldlevel=0</span><br>
+ <span class="item"> set foldlevelstart=99</span><br>
+ <span class="item"> set expandtab</span><br>
+ <span class="item"> set softtabstop=2</span><br>
+ <span class="item"> set showtabline=2</span><br>
+ <span class="item"> set shiftwidth=2</span><br>
+    </code></div><div class="block">
+    <code class="settings">
+ <span class="item"> set splitbelow</span><br>
+ <span class="item"> set showmode</span><br>
+ <span class="item"> set showcmd</span><br>
+ <span class="item"> set incsearch</span><br>
+ <span class="item"> set hlsearch</span><br>
+ <span class="item"> set ttyfast</span><br>
+ <span class="item"> set lazyredraw</span><br>
+ <span class="item"> set splitright</span><br>
+ <span class="item"> set cursorline</span><br>
+ <span class="item"> set wrapscan</span><br>
+ <span class="item"> set report=0</span><br>
+ <span class="item"> set synmaxcol=200</span><br>
+ <span class="item"> set autoindent</span><br>
+ <span class="item"> set nobackup</span><br>
+ <span class="item"> set noswapfile</span><br>
+ <span class="item"> set ruler</span><br>
+ <span class="item"> set matchtime=2</span><br>
+ <span class="item"> set wildchar=<TAB></span><br>
+    </code></div><div class="block">
+    <code class="settings"> 
+ <span class="item"> set list</span><br>
+ <span class="item"> set number</span><br>
+ <span class="item"> set hidden</span><br>
+ <span class="item"> set tm=500</span><br>
+ <span class="item"> set nowrap</span><br>
+ <span class="item"> set nowb</span><br>
+ <span class="item"> set secure</span><br>
+ <span class="item"> set novb</span><br>
+ <span class="item"> set scrolloff=5</span><br>
+    </code>
+    </div>
+    <div class="block">
+    <code class="settings">
+ <span class="item"> let g:netrw_browse_split=0</span><br>
+ <span class="item"> let g:netrw_winsize=15</span><br>
+ <span class="item"> let g:netrw_preview=1</span><br>
+ <span class="item"> let g:netrw_banner=0</span><br>
+ <span class="item"> let g:vetrw_sizestyle="H"</span><br>
+ <span class="item"> let g:netrw_liststyle=3</span><br>
+ <span class="item"> let g:netrw_altv=1</span><br>
+ <span class="item"> let g:netrw_alto=1</span><br>
+    </code></div>
+    <div class="block">
+    <code class="settings">
+ <span class="item"> hi Title ctermfg=white ctermbg=NONE</span><br>
+ <span class="item"> hi Directory ctermfg=cyan ctermbg=white</span><br>
+ <span class="item"> hi ErrorMsg cterm=bold ctermfg=red ctermbg=black</span><br>
+ <span class="item"> hi ModeMsg ctermfg=white ctermbg=NONE </span><br>
+ <span class="item"> hi Normal ctermbg=white ctermbg=NONE</span><br>
+ <span class="item"> hi MatchParen ctermfg=yellow ctermbg=NONE</span><br>
+ <span class="item"> hi Folded ctermfg=white ctermbg=darkgreen</span><br>
+ <span class="item"> hi FoldColumn ctermfg=white ctermbg=darkblue</span><br>
+ <span class="item"> hi Directory ctermfg=cyan ctermbg=NONE</span><br>
+    </code>
+    </div>
+    <div class="block">
+    <code class="settings">
+ <span class="item"> hi Terminal ctermfg=white ctermbg=NONE</span><br>
+ <span class="item"> hi LineNr cterm=reverse ctermfg=darkgreen ctermbg=NONE</span><br>
+ <span class="item"> hi StatusLine ctermfg=darkblue ctermbg=NONE</span><br>
+ <span class="item"> hi StatusLineNC ctermfg=green ctermbg=NONE</span><br>
+ <span class="item"> hi StatusLineTerm ctermfg=darkgreen ctermbg=NONE</span><br>
+ <span class="item"> hi StatusLineTermNC ctermfg=grey ctermbg=NONE</span><br>
+ <span class="item"> hi TabLine ctermfg=grey ctermbg=NONE</span><br>
+ <span class="item"> hi TabLineFill ctermfg=NONE ctermbg=NONE</span><br>
+ <span class="item"> hi TabLineSel ctermfg=darkblue ctermbg=NONE</span><br>
+ <span class="item"> hi Underlined cterm=reverse ctermfg=white ctermbg=darkblue</span><br>
+ <span class="item"> hi Question ctermfg=green ctermfg=white</span><br>
+ <span class="item"> hi Error cterm=bold ctermfg=red ctermbg=black</span><br>
+ <span class="item"> hi Comment font='Monospace 16' ctermfg=darkcyan ctermbg=NONE</span><br>
+ <span class="item"> hi VertSplit ctermfg=grey ctermbg=NONE</span><br>
+ <span class="item"> hi SignColumn ctermfg=red ctermbg=NONE</span><br>
+ <span class="item"> hi Cursor ctermfg=white ctermbg=black</span><br>
+ <span class="item"> hi CursorLineNr cterm=bold ctermfg=red ctermbg=NONE</span><br>
+ <span class="item"> hi Visual cterm=bold ctermfg=black ctermbg=darkblue</span><br>
+ <span class="item"> hi NonText ctermfg=green ctermbg=NONE</span><br>
+ <span class="item"> hi WarningMsg ctermfg=red ctermbg=NONE</span><br>
+ <span class="item"> hi Search ctermfg=cyan ctermbg=black</span><br>
+ <span class="item"> hi IncSearch ctermfg=white ctermbg=black</span><br>
+    </code>
+    </div>
+    <div class="block">
+    <code class="settings">
+ <span class="item"> filetype plugin indent on</span><br>
+ <span class="item"> syntax on</span><br>
+ <span class="item"> scriptencoding=utf-8</span><br>
+ <span class="item"> setglobal fileencoding=utf-8</span><br>
+ <span class="item"> set backspace =indent,eol,start</span><br>
+ <span class="item"> set display =lastline</span><br>
+ <span class="item"> set listchars=tab:»→,trail:␣</span><br>
+ <span class="item"> set termwinsize=10x200</span><br>
+ <span class="item"> au FileType text setlocal tw=120</span><br>
+ <span class="item"> au BufLeave ~/.vim/vimrc :source ~/.vim/vimrcp</span><br>
+ <span class="item"> prevent auto-comment</span><br>
+ <span class="item"> autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    </code>
+    </div>
+    </div>
+  </body>
+</html>
+

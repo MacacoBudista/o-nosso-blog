@@ -1,0 +1,59 @@
+html{
+  background-color:black;
+  color:white;
+}
+
+a{
+  color:cyan;
+  text-decoration: none;
+}
+
+code{
+  color:black;
+  background-color:darkgrey;
+  font-size: 22px;
+  padding:1rem;
+}
+
+.settings{
+  margin-left:20px;
+  text-align:left;
+  position:flex;
+  display:grid;
+}
+
+.settings:hover{
+  color:green;
+  background-color:black; 
+}
+
+.topmenu{
+  padding: 1rem;
+  justify-content:left;
+  display:flex;
+}
+
+.topmenu h3{
+  color:green;
+  margin-top:3rem;
+  position:flex;
+}
+
+
+.container{
+  position:flex;
+  display:flex;
+  flex-direction: flex-end;
+  align-items: stretch;
+  flex-flow: column wrap;
+  justify-content:space-around;
+  flex-direction:row;
+  margin-top:2rem;
+  padding:1em;
+}
+
+
+.item{
+  text-align:left;
+  display:block;
+}

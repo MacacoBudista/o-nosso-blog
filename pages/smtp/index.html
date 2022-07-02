@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Como configurar o SMTP para usar com o Mutt</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+      <h3> Setup ~/.msmtprc </h3>
+    </div>
+    <div class="container">
+      <div class="block">
+    <code class="settings">
+        <span class="item">defaults<span>
+        <span class="item">auth on<span>
+        <span class="item">tls on<span>
+        <span class="item">tls_starttls on<span>
+        <span class="item">tls_certcheck off<span>
+        <span class="item">smtpd_enforce_tls = yes<span>
+        <span class="item">tls_trust_file /etc/ssl/certs/ca-certificate.crt<span>
+        <span class="item">logfile ~/.msmtp.log<span>
+        <span class="item">account monkey<span>
+        <span class="item">host smtp.monkey.org<span>
+        <span class="item">port 587<span>
+        <span class="item">from monkey@monkey.org<span>
+        <span class="item">user monkey@monkey.org<span>
+        <span class="item">passwd "monkeysecrets"<span>
+    </code></div>
+  </body>
+</html>
+

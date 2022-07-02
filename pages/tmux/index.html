@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Como configurar o tmux</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+      <h3> Setup ~/.tmux.conf </h3>
+    </div>
+    <div class="container">
+      <div class="block">
+    <code class="settings"> 
+        <span class="item">unbind C-b<span>
+        <span class="item">set-option -g prefix C-a<span>
+        <span class="item">set status-left ""<span>
+        <span class="item">set-option -g status-position top<span>
+        <span class="item">setw -g mode-keys vi<span>
+        <span class="item">set -g history-limit 10000<span>
+        <span class="item">set -g set-titles on<span>
+        <span class="item">set -g status on<span>
+        <span class="item">set -g base-index 1<span>
+        <span class="item">set -g agreesive-resize on<span>
+        <span class="item">set -g automatic-rename on<span>
+        <span class="item">set -g monitor-activity off<span>
+        <span class="item">set -g monitor-bell off<span>
+        <span class="item">set -g monitor-silence 0<span>
+    </code></div>
+    <div class="block">
+    <code class="settings">
+        <span class="item">set -g pane-border-status top<span>
+        <span class="item">set -g synchronize-panes off<span>
+        <span class="item">set -g allow-rename on<span>
+        <span class="item">set -g pane-base-index 1<span>
+        <span class="item">set -g visual-activity off<span>
+        <span class="item">set -g visual-bell off<span>
+        <span class="item">set -g visual-silence off<span>
+        <span class="item">set -g bell-action none<span>
+        <span class="item">set -g status-bg black<span>
+        <span class="item">set -g status-right-length 150<span>
+        <span class="item">set -g status-interval 60<span>
+        <span class="item">set -g status-justify left<span>
+        <span class="item">set -g renumber-windows on<span>
+        <span class="item">bind r source-file ~/.tmux.conf<span>
+    </code>
+    </div>
+    <div class="block">
+    <code class="settings">
+        <span class="item">
+setw -g window-status-format "#[fg=white]#[bg=black] *#I #[bg=black]#[fg=lightgreen] [#W] "
+
+          <span>
+        <span class="item">
+
+setw -g window-status-current-format "#[bg=black]#[fg=yellow] *#I #[bg=black]#[fg=brightcyan] [#W] "
+          <span>
+    </code>
+    </div>
+    <div class="block">
+    <code class="settings">
+        <span class="item">
+set-option -g set-titles-string '#H:#S.#I.#P #W #T' 
+
+          <span>
+        <span class="item">
+set-option -g default-shell /bin/bash
+
+          <span>
+    </code>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Como configurar o audio em Linux</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+    </div>
+      <article>
+        <header>
+        <p> instalar: </p>
+          <code>
+            apt install alsa-utils
+          </code>
+        <p> usar: alsamixer</p>
+        </header>
+          <h3> Setup ~/.asoundrc </h3>
+
+      </article>
+
+    <div class="container">
+      <div class="block">
+    <code class="settings"> 
+        <span class="item">pcm.!default{<span>
+        <span class="item">type hw<span>
+        <span class="item">card 1<span>
+            <span class="item">}<span>
+    </code></div>
+      <div class="block">
+    <code class="settings"> 
+                    <span class="item">ctl.!default{<span>
+        <span class="item">type hw<span>
+        <span class="item">card 0<span>
+            <span class="item">}<span>
+    </code></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
