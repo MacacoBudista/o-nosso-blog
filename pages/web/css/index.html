@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Como configurar o Isync para usar com o Mutt</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="topmenu">
+      <p>Go <a href="../index.html">Home</a> Monkey!</p>
+      <h3> Setup ~/.mbsyncrc </h3>
+    </div>
+    <div class="container">
+      <div class="block">
+    <code class="settings"> 
+        <span class="item">IMAPStore user@mail.org-remote<span>
+        <span class="item">Host smtp.mail.org<span>
+        <span class="item">Port 993<span>
+        <span class="item">User user@mail.org<span>
+        <span class="item">AuthMechs LOGIC<span>
+        <span class="item">SSLType IMAPS<span>
+        <span class="item">CertificateFile /etc/ssl/certs/ca-certificates.crt<span>
+        <span class="item">MaildirStore user@mail.org-local<span>
+        <span class="item">Subfolders Verbatim<span>
+        <span class="item">Channel user@mail.org<span>
+        <span class="item">Master :user@mail.org-remote:<span>
+        <span class="item">Slave :user@mail.org-local:<span>
+        <span class="item">Create Slave<span>
+        <span class="item">SyncState *<span>
+        <span class="item">Expunge Both<span>
+    </code></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
